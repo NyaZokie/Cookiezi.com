@@ -10,8 +10,8 @@
             var playerDiv = document.getElementById("random_player");
             var player = document.createElement("IFRAME");
             var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
-            player.setAttribute('width', '640');
-            player.setAttribute('height', '390');
+            player.setAttribute('width', 'auto');
+            player.setAttribute('height', 'auto');
             player.setAttribute('src', randomVideoUrl);
             playerDiv.appendChild(player);
         };
@@ -20,21 +20,7 @@
 
 <style>
 
-div.relative {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #73AD21;
-} 
 
-div.absolute {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #73AD21;
-}
 
 </style>
 
