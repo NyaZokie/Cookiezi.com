@@ -2,46 +2,37 @@
 <html>
 <head>
 	<title>RIP Cookiezi</title>
-</head>
-	
-<style>
+	<style>
 
-body {
-    background-color: #000000;
+ 
+#random_player {
+display: block;
+height: 100%;
+left: 25%;
+position: absolute;
+top: 25%;
+width: 100%;
+
 }
-
 </style>
-
-  <script>
-$(document).ready(function() {
-
-var videos = [
-'XaBNrDAxOJY',
-'XaBNrDAxOJY',
-'XaBNrDAxOJY'
-];
-
-var index=Math.floor(Math.random() * videos.length);
-var html='<div id="video"><h3>Random Video</h3><iframe width="720" height="480"   src="http://www.youtube.com/embed/' + videos[index] + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
-document.write(html);
-
-});
+    <script>
+        var videos = ["https://www.youtube.com/embed/9bZkp7q19f0?autoplay=1",
+        "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            var player = document.createElement("IFRAME");
+            player.setAttribute('width', '840');
+            player.setAttribute('height', '590');
+            autoplay="true"
+            player.setAttribute('src', randomVideoUrl);
+            playerDiv.appendChild(player);
+        };
     </script>
+</head>
 
-
-<style>
-
-
-
-</style>
-
-	<body>
-	
- <div id="video" />
-	
-	</body>
-
+<body>
+    <div id="random_player" />
+</body>
+		
 </html>
-
-
-
