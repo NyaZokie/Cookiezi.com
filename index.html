@@ -20,7 +20,7 @@ width: 100%;
         window.onload = function () {
             var playerDiv = document.getElementById("random_player");
             var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
-            var player = document.createElement("IFRAME" allowfullscreen);
+            var player = document.createElement("IFRAME");
             player.setAttribute('width', '840');
             player.setAttribute('height', '590');
             autoplay="true"
