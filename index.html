@@ -16,11 +16,11 @@ width: 100%;
 }
 </style>
     <script>
-        var videos = ["https://www.youtube.com/embed/93_IICnmtTU" allowfullscreen",
+        var videos = ["https://www.youtube.com/embed/93_IICnmtTU",
         window.onload = function () {
             var playerDiv = document.getElementById("random_player");
             var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
-            var player = document.createElement("IFRAME");
+            var player = document.createElement("IFRAME" allowfullscreen);
             player.setAttribute('width', '840');
             player.setAttribute('height', '590');
             autoplay="true"
